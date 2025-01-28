@@ -22,7 +22,11 @@ def home():
 
     all_cars = Automobilis.query.all()
     if all_cars:
-        return render_template("index.html", automobiliai=all_cars)
+        cars = Automobilis.query.all()
+        suma = 0
+        for car in cars:
+            suma += car.kaina
+        return render_template("index.html", automobiliai=all_cars, suma=suma)
     else:
         return "Duomenų nėra"
 

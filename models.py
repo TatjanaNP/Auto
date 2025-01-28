@@ -13,3 +13,5 @@ class Automobilis(db.Model):
     spalva = db.Column(db.String)
     salis = db.Column(db.String)
     kaina = db.Column(db.Float)
+
+
