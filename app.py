@@ -79,7 +79,6 @@ def delete_car(row_id):
         db.session.commit()
         return redirect(url_for("home"))
 
-
 @app.route("/automobilis/naujas", methods=["get", "post"])
 def create_car():
     if request.method == "GET":
