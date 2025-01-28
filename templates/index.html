@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Automobilių duomenys</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content  %}
+
 <h4>Automobiliai</h4>
 
 <form action="" method="get">
@@ -46,5 +42,4 @@
     {% endfor %}
 </table>
 
-</body>
-</html>
+{% endblock %}

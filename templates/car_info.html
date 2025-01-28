@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Automobilio informacija</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-        <p> {{ automobilis.id }} </p>
-        <p> {{ automobilis.gamintojas }} </p>
-        <p> {{ automobilis.modelis }} </p>
-        <p> {{ automobilis.spalva }} </p>
-        <p> {{ automobilis.salis }} </p>
-        <p> {{ automobilis.kaina }} </p>
+{% extends "base.html" %}
+
+{% block content  %}
+
+<h4>Automobilio duomenys</h4>
+
+<p> id: {{ automobilis.id }} </p>
+<p> gamintojas: {{ automobilis.gamintojas }} </p>
+<p> modelis: {{ automobilis.modelis }} </p>
+<p> spalva: {{ automobilis.spalva }} </p>
+<p> salis: {{ automobilis.salis }} </p>
+<p> kaina: {{ automobilis.kaina }} </p>
 
 
-</body>
-</html>
+{% endblock %}
