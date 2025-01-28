@@ -18,7 +18,10 @@ def home():
     if paieskos_tekstas:
         search_text = request.args.get("searchlaukelis")
         paieskos_rez = Automobilis.query.filter(Automobilis.gamintojas.ilike(f"{search_text}%"))
-        return render_template("index.html", automobiliai=paieskos_rez)
+        suma = 0
+        for car in paieskos_rez:
+            suma += car.kaina
+        return render_template("index.html", automobiliai=paieskos_rez, suma=suma)
 
     all_cars = Automobilis.query.all()
     if all_cars:
