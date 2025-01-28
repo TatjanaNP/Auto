@@ -13,7 +13,7 @@
     <p><input type="submit" value="filtruoti"></p>
 
 </form>
-<p><a href="/projektas/naujas">Ivesti nauja</a></p>
+<p><a href="/automobilis/naujas">Ivesti nauja</a></p>
 
 
 <table>
@@ -37,7 +37,9 @@
         <td>
             <a href="/automobilis/{{ automobilis.id }}">ziureti</a>
             <a href="/automobilis/redaguoti/{{ automobilis.id }}">redaguoti</a>
-
+            <form action="/automobilis/trinti/{{ automobilis.id }}" method="post" style="display:inline;">
+                 <input type="submit" value="trinti">
+             </form>
         </td>
 
     </tr>

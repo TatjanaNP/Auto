@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automobilio informacijos atnaujinimas</title>
+</head>
+<body>
+<form action="" method="post">
+
+    <p>Automobilio gamintojas</p>
+    <p><input type="text" value="{{ automobilis.gamintojas }}" name="gamintojaslaukelis"></p>
+
+    <p>Automobilio modelis</p>
+    <p><input type="text" value="{{ automobilis.modelis }}" name="modelislaukelis"></p>
+
+    <p>Automobilio spalva</p>
+    <p><input type="text" value="{{ automobilis.spalva }}" name="spalvalaukelis" ></p>
+
+    <p>Automobilio salis</p>
+    <p><input type="text" value="{{ automobilis.salis }}" name="salislaukelis" ></p>
+
+    <p>Automobilio kaina</p>
+    <p><input type="text" value="{{ automobilis.kaina }}" name="kainalaukelis" ></p>
+
+  <p><input type="submit" value="save"></p>
+
+</form>
+
+</body>
+</html>
