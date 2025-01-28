@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automobilių duomenys</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<h4>Automobiliai</h4>
+
+<form action="" method="get">
+    <p><input type="text" name="searchlaukelis"></p>
+    <p><input type="submit" value="filtruoti"></p>
+
+</form>
+<p><a href="/projektas/naujas">Ivesti nauja</a></p>
+
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>gamintojas</th>
+        <th>modelis</th>
+        <th>spalva</th>
+        <th>salis</th>
+        <th>kaina</th>
+        <th>veiksmai</th>
+    </tr>
+    {% for automobilis in automobiliai %}
+    <tr>
+        <td>{{ automobilis.id }} </td>
+        <td>{{ automobilis.gamintojas }}</td>
+        <td>{{ automobilis.modelis }}</td>
+        <td>{{ automobilis.spalva }}</td>
+        <td>{{ automobilis.salis }}</td>
+        <td>{{ automobilis.kaina }}</td>
+        <td>
+            <a href="/automobilis/{{ automobilis.id }}">ziureti</a>
+            <a href="/automobilis/redaguoti/{{ automobilis.id }}">redaguoti</a>
+
+        </td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
